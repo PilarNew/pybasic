@@ -24,3 +24,19 @@ print(numero)
 print(decimal)
 
 print("--------------------------")
+
+# Concatenación
+nombre = "Naya"
+apellido ="Gonza"
+edad = "?"
+
+print(nombre+ " " + apellido + " " + "-" + " " + edad)
+
+# Interpolación
+print(f"{nombre} {apellido} - {edad}")
+
+# Método format
+print("Hola mi nombre es {} {} y mi edad es {}".format(nombre,apellido,edad))
+
+# No se está concatenando
+print(nombre,apellido,edad)
