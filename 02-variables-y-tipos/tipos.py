@@ -38,3 +38,15 @@ print(type(tupla)) # tuple
 print(type(diccionario)) # dict
 print(type(rango)) # range
 print(type(dato_byte)) # bytes
+
+texto = "Hola soy un texto"
+# Se convierte el número 555 a string con str
+numerito = str(555)
+print(texto + " " + numerito )
+
+numerito = int(776)
+print(type(numerito))
+
+numerito = float(776)
+print (numerito)
+print(type(numerito))
