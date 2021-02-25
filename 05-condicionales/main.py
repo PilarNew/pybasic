@@ -104,3 +104,34 @@ if edad_oficial>=edad_minima and edad_oficial <= edad_maxima:
     print("Estás en edad de trabajar")
 else:
     print("No estás en edad de trabajar")
+
+
+# Ejemplo 6
+print("\n################ EJENPLO 6 ################")
+
+pais = "Alemania"
+
+if pais == "México" or pais == "España" or pais == "Chile":
+    print(f"{pais} es país hispano parlante")
+else:
+    print(f"{pais} NO es país hispano parlante")
+
+# Ejemplo 7
+print("\n################ EJENPLO 7 ################")
+
+pais = "España"
+
+if not (pais == "México" or pais == "España" or pais == "Chile"):
+    print(f"{pais} NO es país hispano parlante")
+else:
+    print(f"{pais} es país hispano parlante")
+
+# Ejemplo 8
+print("\n################ EJENPLO 8 ################")
+
+pais = "Chile"
+
+if pais != "México" and pais != "España" and pais != "Chile":
+    print(f"{pais} NO es país hispano parlante")
+else:
+    print(f"{pais} es país hispano parlante")
