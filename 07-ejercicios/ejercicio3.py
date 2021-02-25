@@ -6,7 +6,7 @@ Ejercicio 3
 
 """
 # FOR
-contador = 1
+
 for contador in range(1,61):
     multiplicacion = contador*contador
     print(multiplicacion)
