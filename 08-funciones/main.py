@@ -83,35 +83,53 @@
 # print(saludame("Nana"))
 
 
-# Ejemplo 6
-print("\n######### EJEMPLO 6 ########")
+# # Ejemplo 6
+# print("\n######### EJEMPLO 6 ########")
 
-def calculadora(numero1,numero2,basicas = False):
-    suma = numero1 + numero2
-    resta = numero1 - numero2
-    division = numero1 / numero2
-    multiplicacion = numero1 * numero2
+# def calculadora(numero1,numero2,basicas = False):
+#     suma = numero1 + numero2
+#     resta = numero1 - numero2
+#     division = numero1 / numero2
+#     multiplicacion = numero1 * numero2
 
-    cadena ="" 
+#     cadena ="" 
 
-    if basicas != False:
-        cadena += "Suma: " + str(suma)
-        cadena += "\n"
-        cadena += "Resta: " + str(resta)
-        cadena += "\n"
-    else:
-        cadena += "Suma: " + str(suma)
-        cadena += "\n"
-        cadena += "Resta: " + str(resta)
-        cadena += "\n"
-        cadena += "Multiplicación: " + str(multiplicacion)
-        cadena += "\n"
-        cadena += "División: " + str(division)
-        cadena += "\n"
+#     if basicas != False:
+#         cadena += "Suma: " + str(suma)
+#         cadena += "\n"
+#         cadena += "Resta: " + str(resta)
+#         cadena += "\n"
+#     else:
+#         cadena += "Suma: " + str(suma)
+#         cadena += "\n"
+#         cadena += "Resta: " + str(resta)
+#         cadena += "\n"
+#         cadena += "Multiplicación: " + str(multiplicacion)
+#         cadena += "\n"
+#         cadena += "División: " + str(division)
+#         cadena += "\n"
 
-    return cadena
+#     return cadena
    
 
     
     
-print(calculadora(5,5))
+# print(calculadora(5,5))
+
+
+# Ejemplo 7
+print("\n######### EJEMPLO 7 ########")
+
+def getNombre(nombre):
+    texto = f"El nombre es {nombre}"
+    return texto
+
+def getApellido(apellido):
+    texto = f"Los apellidos son: {apellido}"
+    return texto
+
+def devuelveTodo(nombre,apellido):
+    texto = getNombre(nombre) + "\n" + getApellido(apellido)
+    return texto
+
+print(devuelveTodo('Pilar','González Mann'))
