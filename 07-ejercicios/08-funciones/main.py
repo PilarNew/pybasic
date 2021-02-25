@@ -58,3 +58,16 @@ tabla(7)
 
 for numero_tabla in range(1,11):
     tabla(numero_tabla)
+
+
+# Ejemplo 4 -  Parámetros opcionales
+print("######### EJEMPLO 3 ########")
+
+
+def getEmpleado(nombre,run=None):
+    print("EMPLEADO")
+    print(f"Nombre: {nombre}")
+    if run != None:
+        print(f"RUN: {run}")
+
+getEmpleado("Pilar","333333")
