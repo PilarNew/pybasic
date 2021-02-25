@@ -42,9 +42,29 @@ else:
 
 print("\n################ EJENPLO 2 ################")
 
-#year = 2020
-year = int(input("¿En qué año estamos?: "))
+year = 2020
+# year = int(input("¿En qué año estamos?: "))
 if year >= 2021:
     print("Estamos de 2021 en adelante!!")
 else: 
     print("Es un año anterior a 2021")
+
+# Ejemplo 3
+
+print("\n################ EJENPLO 3 ################")
+
+nombre = input("¿Cuál es tu nombre?: ")
+continente = input("¿En qué continente vives?: ")
+ciudad = input("¿En qué ciudad vives?: ")
+edad = input(("Qué edad tienes?: "))
+mayoria_edad = 18
+
+if int(edad) >= mayoria_edad:
+    print(f"{nombre} es mayor de edad")
+    if continente == "Europa":
+        print(f"Es europeo y de {ciudad}")
+    else:
+        print(f"El usuario no es Europeo, es de {ciudad} en {continente}")
+else:
+    print(f"{nombre} no es mayor de edad")
+
