@@ -26,3 +26,16 @@ def muestraNombre():
 muestraNombre()
 muestraNombre()
 muestraNombre()
+
+# Ejemplo 2 Parámetros
+print("######### EJEMPLO 2 ########")
+
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Ingresa tu edad: "))
+
+def muestraTuNombre(data,edad):
+    print(f"Hola {data}")
+    if edad > 18:
+        print(f"{data} eres mayor de edad")
+
+muestraTuNombre(nombre,edad)
