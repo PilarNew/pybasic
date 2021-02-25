@@ -133,3 +133,18 @@ def devuelveTodo(nombre,apellido):
     return texto
 
 print(devuelveTodo('Pilar','González Mann'))
+
+# Ejemplo 8 funciones Lambda
+"""
+Fn Lambda = Función anónima, no tiene nombre concreto.
+No hace falta definirla con def 
+Para tareas simples y pequeñas
+Funciones simples
+Se define en una línea
+
+"""
+print("\n######### EJEMPLO 8 ########")
+
+tell_me_year = lambda year: f"El año es {year}"
+
+print(tell_me_year(2021))
