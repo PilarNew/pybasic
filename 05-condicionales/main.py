@@ -13,17 +13,38 @@ if condicion:
 else:
     otras instrucciones
     
+
+# Operadores de Comparación
+
+== igual
+!= diferente
+< menor que
+> mayor que
+<= menor o igual que
+>= mayor o igual que
 """
 
 # Ejemplo 1
 
 print("################ EJENPLO 1 ################")
 
-# color = "azul"
-color = input("Adivina cuál es mi color favorito: ")
+color = "azul"
+# color = input("Adivina cuál es mi color favorito: ")
 if color == "rojo":
     print("Has adivinado el color")
-    print("El color es rojo")
+    print("El color es ROJO")
 else: 
     print(f"El color no es {color}")
     print("El color es incorrecto")
+
+
+# Ejemplo 2
+
+print("\n################ EJENPLO 2 ################")
+
+#year = 2020
+year = int(input("¿En qué año estamos?: "))
+if year >= 2021:
+    print("Estamos de 2021 en adelante!!")
+else: 
+    print("Es un año anterior a 2021")
