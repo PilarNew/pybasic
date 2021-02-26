@@ -36,14 +36,38 @@ print(peliculas[1:])
 cantantes.append("KC")
 print(cantantes)
 
-# Recorrer y mostrar una lista
-print("\n############# LISTADO PELÍCULAS ##############")
+# # Recorrer y mostrar una lista
+# print("\n############# LISTADO PELÍCULAS ##############")
 
-nueva_pelicula =""
-while nueva_pelicula != "parar":
-    nueva_pelicula = input("Introduce la nueva película: ")
-    if nueva_pelicula != "parar":
-        peliculas.append(nueva_pelicula)
+# nueva_pelicula =""
+# while nueva_pelicula != "parar":
+#     nueva_pelicula = input("Introduce la nueva película: ")
+#     if nueva_pelicula != "parar":
+#         peliculas.append(nueva_pelicula)
 
-for pelicula in peliculas:
-    print(f"{peliculas.index(pelicula) + 1}: {pelicula}")
+# for pelicula in peliculas:
+#     print(f"{peliculas.index(pelicula) + 1}: {pelicula}")
+
+# Listas multidimensionales
+print("\n############# LISTADO DE CONTACTOS ##############")
+
+contactos = [
+    ["Mario","mario@gmail.com"],
+    ["Claudia","claudia@gmail.com"],
+    ["Rodrigo","rodrigo@gmail.com"]
+]
+
+# for contacto in contactos:
+#     for elemento in contacto:
+#         print(elemento)
+#     print("\n")
+#     # print(contacto[0])
+# # print(contactos[1][0])
+
+for contacto in contactos:
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print("Nombre: " + elemento)
+        else:
+            print("Email: " + elemento)
+    print("\n")
