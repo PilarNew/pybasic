@@ -36,7 +36,7 @@ print(peliculas[1:])
 cantantes.append("KC")
 print(cantantes)
 
-# Recorrer Lista
+# Recorrer y mostrar una lista
 print("\n############# LISTADO PELÍCULAS ##############")
 
 nueva_pelicula =""
