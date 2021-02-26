@@ -31,3 +31,19 @@ print(peliculas[0])
 print(peliculas[-1])
 print(peliculas[1:3])
 print(peliculas[1:])
+
+# Añadir Elemento a lista
+cantantes.append("KC")
+print(cantantes)
+
+# Recorrer Lista
+print("\n############# LISTADO PELÍCULAS ##############")
+
+nueva_pelicula =""
+while nueva_pelicula != "parar":
+    nueva_pelicula = input("Introduce la nueva película: ")
+    if nueva_pelicula != "parar":
+        peliculas.append(nueva_pelicula)
+
+for pelicula in peliculas:
+    print(f"{peliculas.index(pelicula) + 1}: {pelicula}")
