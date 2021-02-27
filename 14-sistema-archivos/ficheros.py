@@ -1,6 +1,6 @@
 from io import open
 
-import pathlib
+import pathlib,shutil
 
 # Abrir archivo
 # Se crea archivo
@@ -45,3 +45,8 @@ for elemento in lista:
 
 for elemento in lista:
     print("-" + elemento.center(100))
+
+    # COPIAR
+    ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_texto.txt"
+    ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto.txt"
+    shutil.copyfile(ruta_original,ruta_nueva)
