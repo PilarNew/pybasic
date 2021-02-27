@@ -50,3 +50,18 @@ print(fecha_personalizada)
 print( datetime.datetime.now().timestamp())
 
 print( datetime.datetime.now().time())
+
+# Módulo matemáticas
+import math
+print("Raíz cuadrada de 10: ", math.sqrt(10))
+print("Número PI: ", float(math.pi))
+# Redondeo a 7
+print("Redondear: ", math.ceil(6.178659))
+# Redondeo a 6
+print("Redondear: ", math.floor(6.178659))
+
+# Módulo Random
+import random
+
+# Se incluyen los extremos en el número de salida
+print("Número aleatorio entre 15 y 30: ", random.randint(15,30))
