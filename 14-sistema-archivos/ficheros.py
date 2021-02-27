@@ -45,8 +45,15 @@ for elemento in lista:
 
 for elemento in lista:
     print("-" + elemento.center(100))
+"""
+# COPIAR
+ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_texto.txt"
+ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto.txt"
+shutil.copyfile(ruta_original,ruta_nueva)
+"""
+# MOVER
+# Cambia el archivo de posición y lo pone en otro directorio cambiándole el nombre
+ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_texto.txt"
+ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto_NUEVO.txt"
 
-    # COPIAR
-    ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_texto.txt"
-    ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto.txt"
-    shutil.copyfile(ruta_original,ruta_nueva)
+shutil.move(ruta_original,ruta_nueva)
