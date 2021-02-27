@@ -26,3 +26,27 @@ from mimodulo import *
 # Utiizando 
 print(holaMundo("Pili"))
 print(calculadora(5,5))
+
+
+# Módulo fechas
+
+import datetime
+
+print(datetime.date.today())
+
+fechacompleta = datetime.datetime.now()
+print(fechacompleta)
+print(fechacompleta.weekday)
+print(fechacompleta.year)
+print(fechacompleta.month)
+print(fechacompleta.day)
+print(fechacompleta.hour)
+
+# Formateando las fechas
+fecha_personalizada = fechacompleta.strftime("%d/%m/%Y,%H:%M:%S")
+print(fecha_personalizada)
+
+# Timestamp
+print( datetime.datetime.now().timestamp())
+
+print( datetime.datetime.now().time())
