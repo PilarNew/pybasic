@@ -51,9 +51,31 @@ ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_tex
 ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto.txt"
 shutil.copyfile(ruta_original,ruta_nueva)
 """
+
+"""
 # MOVER
 # Cambia el archivo de posición y lo pone en otro directorio cambiándole el nombre
 ruta_original = str(pathlib.Path().absolute())+"/14-sistema-archivos/archivo_texto.txt"
 ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto_NUEVO.txt"
 
 shutil.move(ruta_original,ruta_nueva)
+"""
+"""
+# ELIMINAR ARCHIVOS
+import os
+
+ruta_nueva = str(pathlib.Path().absolute())+"/archivo_copiado_texto_NUEVO.txt"
+
+os.remove(ruta_nueva)
+"""
+# COMPROBACIÓN DE QUE UN ARCHIVO EXISTE
+import os.path
+# print(os.path.abspath("./"))
+# print(os.path.abspath("../"))
+
+ruta_comprobar = os.path.abspath("./")+"/14-sistema-archivos/archivo_texto1.txt"
+ruta_relativa = "./14-sistema-archivos/archivo_texto1.txt"
+if os.path.isfile(ruta_relativa):
+    print("El arachivo existe")
+else:
+     print("El arachivo NO existe")
