@@ -7,10 +7,10 @@ Ejercicio 1
 - Ordenarla y mostrarla
 - Buscar algún elemento que el usuario diga por teclado
 """
+
+"""
 # Se crea lista
 numeros = [100,20,15,4000,56,88]
-
-
 
 # Se recorre y se muestra los números
 def mostrarLista(listas):
@@ -48,6 +48,21 @@ print(f"########## Buscar en la lista {buscado} ###########")
 
 search = numeros.index(buscado)
 print(f"El número buscado existe en la lista es el ínice {search}; {numeros[search]}")
+
+"""
+
+# Múltiples excepciones
+try:
+    numero = int(input("Número para calcular el cuadrado: "))
+    print("Esl cuadrado es: " + str(numero*numero))
+except TypeError:
+    print("Debes convertir tus cadenas a enteros!!!")
+# except ValueError:
+#     print("Introduce un número correcto!!!")
+except Exception as e:
+    print("Ha ocurrido un error: ", type(e).__name__)
+
+
 
 
 
