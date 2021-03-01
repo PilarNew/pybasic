@@ -50,7 +50,7 @@ search = numeros.index(buscado)
 print(f"El número buscado existe en la lista es el ínice {search}; {numeros[search]}")
 
 """
-
+"""
 # Múltiples excepciones
 try:
     numero = int(input("Número para calcular el cuadrado: "))
@@ -61,8 +61,21 @@ except TypeError:
 #     print("Introduce un número correcto!!!")
 except Exception as e:
     print("Ha ocurrido un error: ", type(e).__name__)
+"""
 
+# Excepciones personalizadas o lanzar excepciones
+try:
+    nombre = input("Introduce el nombre: ")
+    edad = int(input("Introduce la edad: "))
 
-
-
-
+    if edad < 5 or edad > 110:
+        raise ValueError("La edad introducida no es real")
+    elif len(nombre) <= 1:
+        raise ValueError("El nombre no está completo")
+    else:
+        print(f"bienvenido!!! {nombre}")
+except ValueError:
+    print(f"Introduce los datos correctos {nombre}")
+except Exception as e:
+    print("Existe un error: ", e )
+#con try/except se captura el error y es más limpia la salida del error
