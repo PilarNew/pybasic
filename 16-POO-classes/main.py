@@ -14,6 +14,18 @@ class Auto:
 
     # Métodos, son acciones que realiza el objeto (auto)(funciones)
 
+    def setColor(self,color):
+        self.color = color
+    
+    def getColor(self):
+        return self.color
+    
+    def setModelo(self,modelo):
+        self.modelo = modelo
+    
+    def getModelo(self):
+        return self.modelo
+
     def acelerar(self):
         self.velocidad += 1
     
@@ -28,7 +40,10 @@ class Auto:
 # Crear objetos / Instanciar la clase
 
 auto = Auto()
-print(auto.marca,auto.color)
+
+auto.setColor("verde")
+auto.setModelo("mariposa")
+print(auto.marca,auto.getModelo(),auto.getColor())
 print("Velocidad actual: ", auto.velocidad)
 
 auto.acelerar()
@@ -40,3 +55,7 @@ print("Velocidad nueva: ", auto.velocidad)
 
 auto.frenar()
 print("Velocidad nueva: ", auto.velocidad)
+
+# Getter para sacar datos Ej.: Obtener velocidad
+# Setter para asignarle un valor Ej.: acelerar, frenar
+
