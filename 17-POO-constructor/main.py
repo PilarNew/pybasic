@@ -15,3 +15,8 @@ if type(carro3) == Auto:
     print("Es un objeto correcto")
 else: 
     print("No es un objeto!!!")
+
+# Visibilidad
+# Atributos públicos por defecto en una clase Python
+print(carro3.soy_publico)
+print(carro3.getPrivado())
