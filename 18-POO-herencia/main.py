@@ -8,3 +8,4 @@ persona.setEdad("30 años")
 persona.setAltura("151 cm")
 
 print(f"La persona es: {persona.getNombre()} {persona.getApellidos()}, tiene {persona.getEdad()} y mide {persona.getAltura()}")
+print(persona.hablar())
