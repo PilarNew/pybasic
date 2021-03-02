@@ -46,7 +46,7 @@ class Informatico(Persona):
     # lenguajes
     # experiencia
 
-    def __init__(self,lenguajes,experiencia):
+    def __init__(self):
         self.lenguajes = "HTML, CSS, Javascript, PHP"
         self.experiencia = 5
     
@@ -62,3 +62,13 @@ class Informatico(Persona):
     
     def repararPC(self):
         return "He reparado el PC"
+
+class TecnicoRedes(Informatico):
+
+    def __init__(self):
+        super().__init__() # Aquí se cargan también se cargan los datos del constructor en la clase padre
+        self.auditarRedes="experto"
+        self.experienciaRedes = 15
+    
+    def auditoria(self):
+        return "Estoy realizando una auditoria"
