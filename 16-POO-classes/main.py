@@ -59,3 +59,10 @@ print("Velocidad nueva: ", auto.velocidad)
 # Getter para sacar datos Ej.: Obtener velocidad
 # Setter para asignarle un valor Ej.: acelerar, frenar
 
+# Crear más objetos
+print("\n------------- AUTO 1 ---------------")
+auto1 = Auto()
+auto1.setColor("Negro")
+print(auto1.marca,auto1.getModelo(),auto1.getColor())
+
+print(type(auto1))
