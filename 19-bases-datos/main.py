@@ -10,7 +10,11 @@ database = mysql.connector.connect(
 # La conexión ha sido correcta?
 # print(database)
 
+# Cursor - Nos permite ejecutar la consulta
 cursor = database.cursor()
+
+"""
+# Crear base de datos
 cursor.execute("CREATE DATABASE IF not EXISTS master_python")
 
 # Para saber en el códgo si existe la base de datos
@@ -18,3 +22,21 @@ cursor.execute("SHOW DATABASES")
 # Muestra todas las bases de datos existentes
 for bd in cursor:
     print(bd)
+"""
+
+# Crear tablas
+cursor.execute("""
+CREATE TABLE vehiculos(
+    id int(10) auto_increment not null,
+    marca varchar(40) not null,
+    modelo varchar(40) not null,
+    precio float(10,2) not null,
+    CONSTRAINT pk_vehiculo PRIMARY KEY(id)
+)
+""")
+
+# Para saber en el códgo si existe la tabla recién creada para no ir al administrador
+cursor.execute("SHOW DATABASES")
+# Muestra todas las bases de datos existentes
+for table in cursor:
+    print(table)
