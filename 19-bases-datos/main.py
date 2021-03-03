@@ -12,7 +12,7 @@ database = mysql.connector.connect(
 
 # Cursor - Nos permite ejecutar la consulta
 cursor = database.cursor()
-
+# cursor = database.cursor(buffered=True) *** Solo cuando ejecutamos varias consultas diferentes
 """
 # Crear base de datos
 cursor.execute("CREATE DATABASE IF not EXISTS master_python")
@@ -53,10 +53,16 @@ coches = [
 
 database.commit() # Guarda los cambios en la base de datos que tenemos dentro del cursor
 
+# LISTAR
 # cursor.execute("SELECT * FROM vehiculos WHERE precio <= 5000 and  marca = 'Seat'")
 # result = cursor.fetchall()
 # for auto in result:
 #     print(auto[1],auto[3])
+
+cursor.execute("SELECT * FROM vehiculos")
+result = cursor.fetchall()
+for auto in result:
+    print(auto[1], auto[2], auto[3])
 
 # Realiza consulta
 # cursor.execute("SELECT marca FROM vehiculos")
@@ -65,7 +71,19 @@ database.commit() # Guarda los cambios en la base de datos que tenemos dentro de
 # for auto in result:
 #     print(auto[0])
 
-cursor.execute("SELECT * FROM vehiculos")
-coche = cursor.fetchone()
-# for auto in result:
-print(coche)
+# cursor.execute("SELECT * FROM vehiculos")
+# coche = cursor.fetchone()
+# # for auto in result:
+# print(coche)
+
+# BORRAR
+cursor.execute("DELETE FROM vehiculos WHERE marca = 'Mercedes'")
+database.commit()# Ejecutar cambios en la base
+
+print(cursor.rowcount,"borrados!!") # Indica cuántos registros fueron borrados
+
+# ACTUALIZAR
+
+cursor.execute("UPDATE vehiculos SET modelo='Leon' WHERE marca='Seat'")
+database.commit() 
+print(cursor.rowcount,"actualizados!!") # Indica cuántos registros fueron actualizados
