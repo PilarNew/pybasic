@@ -49,6 +49,23 @@ coches = [
     ('Mercedes', 'Clase C',35000)
 ]
 
-cursor.executemany("INSERT INTO vehiculos VALUES (null, %s, %s, %s)",coches)
+# cursor.executemany("INSERT INTO vehiculos VALUES (null, %s, %s, %s)",coches)
 
 database.commit() # Guarda los cambios en la base de datos que tenemos dentro del cursor
+
+# cursor.execute("SELECT * FROM vehiculos WHERE precio <= 5000 and  marca = 'Seat'")
+# result = cursor.fetchall()
+# for auto in result:
+#     print(auto[1],auto[3])
+
+# Realiza consulta
+# cursor.execute("SELECT marca FROM vehiculos")
+# # Trae y almacena todos los datos de la consulta
+# result = cursor.fetchall()
+# for auto in result:
+#     print(auto[0])
+
+cursor.execute("SELECT * FROM vehiculos")
+coche = cursor.fetchone()
+# for auto in result:
+print(coche)
